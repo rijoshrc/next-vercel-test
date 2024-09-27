@@ -1,0 +1,233 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+
+.section__promo {
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    .banner {
+        width: 100%;
+        height: 500px;
+        margin: 25px 0;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        position: relative;
+        border-radius: 5px;
+    }
+
+    .banner-img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .discount-container {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .discount-banner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .rebate {
+        width: 350px;
+        height: 3rem;
+        background: $c-red;
+        position: absolute;
+        transform: rotate(-45deg);
+        left: -120px;
+        top: 20px;
+
+        p {
+            color: $c-white;
+            text-align: center;
+            position: absolute;
+            left: 48%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.7rem;
+            font-weight: 800;
+            width: 100%;
+        }
+    }
+
+
+    .content {
+        float: right;
+        min-width: 25%;
+        max-width: 66%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+        color: $c-white;
+
+        .wrapper {
+            width: auto;
+            text-align: right;
+            padding: 15px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+
+            div {
+                width: 100%;
+            }
+
+            .cottage-info, .cottage-price {
+                margin-bottom: 50px;
+                color: $c-white;
+            }
+
+            p {
+                //font-size: 16px;
+                //Added by client
+                font-size: 24px;
+
+                &.default {
+                    font-size: 18px;
+                    text-decoration: line-through;
+                }
+            }
+
+            .heading {
+                color: $c-white;
+            }
+
+            .subheading {
+                font-weight: $medium;
+                font-size: 30px;
+            }
+
+            p, .heading, .subheading {
+                margin: 0;
+                color: $c-white;
+            }
+
+            .cottage-info {
+                word-break: break-word;
+                line-height: 1 !important;
+            }
+
+            .discount {
+                font-size: 2.5rem;
+                font-weight: $bold;
+                color: $c-white;
+            }
+
+            .cap3 {
+                font-size: 1.2rem !important;
+            }
+
+            .cap2 {
+                font-family: $caveat;
+                font-size: 2.8rem !important;
+            }
+        }
+    }
+
+    .heading {
+        font-size: 70px;
+        line-height: 80px;
+        font-family: $caveat;
+        color: inherit;
+    }
+
+    .button {
+        display: inline-block;
+        padding-right: 10px;
+        padding-left: 10px;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    @include media("<md") {
+
+        h2, h2.heading {
+            font-size: 60px;
+            line-height: 1.3;
+        }
+    }
+
+
+    @include media("<sm") {
+
+        h2, h2.heading {
+            font-size: 44px;
+        }
+
+
+        .content {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            bottom: -1px;
+            max-width: 100%;
+
+            .wrapper {
+                display: block !important;
+
+                .cottage-price,
+                .cottage-info {
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+
+                .default {
+                    text-decoration: line-through;
+                    font-size: 1rem;
+                    color: $c-white;
+                }
+
+                p {
+                    font-size: 1rem !important;
+                    color: $c-white;
+                }
+
+                .subheading {
+                    color: $c-white;
+                    font-weight: $medium;
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            text-align: center;
+            white-space: nowrap;
+        }
+    }
+
+    @include media("<375px") {
+        .content .wrapper {
+            .cottage-price .discount {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+.frosted-glass {
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}

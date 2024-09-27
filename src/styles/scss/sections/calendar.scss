@@ -1,0 +1,462 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+/// <reference path="../utilities/mixins/mixins.scss" />
+
+.section__calendar {
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    h3 {
+        font-size: 20px;
+        font-weight: $bold;
+        font-family: $basefont;
+        color: $bg-green;
+    }
+
+    .info-text {
+        font-family: var(--font-caveat-regular),cursive !important;
+        text-align: center;
+        display: flex;
+        width: 100%;
+        margin-bottom: 0px;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            margin-right: 5px;
+        }
+    }
+
+
+    .calendar__item {
+        .date-legends {
+            display: none;
+        }
+
+        &-details {
+            position: absolute;
+            top: auto;
+            left: 0;
+            z-index: 1;
+
+            div.arrival {
+                display: flex;
+                font-size: 16px;
+                padding: 10px 20px;
+                width: 100%;
+                background-color: $bg-dark;
+                border-bottom: none;
+
+                .label {
+                    width: 40%;
+                    font-weight: $semibold;
+                    color: $c-white;
+                    text-align: left;
+                }
+
+                .value {
+                    width: 60%;
+                    font-weight: normal;
+                    color: $c-white;
+                }
+            }
+
+            ul {
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+                @include reset-list;
+                display: table-cell;
+                width: auto;
+                min-width: 250px;
+            }
+
+            li {
+                display: flex;
+                font-size: 16px;
+                background-color: $c-white;
+                padding: 10px 20px;
+                border-bottom: solid 1px #d7d7d7;
+                width: 100%;
+
+                a {
+                    display: flex !important;
+                    width: 100% !important;
+                    background-color: transparent !important;
+                    text-align: left !important;
+                    text-decoration: none;
+                    padding: 0;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                .label {
+                    width: 40%;
+                    font-weight: normal;
+                    color: $c-darker;
+                }
+
+                .value {
+                    width: 60%;
+                    color: $c-red;
+                    font-weight: $semibold;
+                }
+            }
+        }
+    }
+
+    .ui-widget {
+        border-radius: 5px;
+        border: solid 2px #ebebeb;
+        background-color: $c-white;
+        padding: 25px;
+        width: 100% !important;
+        max-width: 710px;
+    }
+
+
+    .ui-datepicker-group {
+        &.ui-datepicker-group-first {
+            padding-right: 25px;
+        }
+
+        &.ui-datepicker-group-last {
+            padding-left: 25px;
+        }
+    }
+
+    .ui-widget-header {
+        border: none;
+        background-color: $c-white;
+    }
+
+    .ui-datepicker {
+        &-header {
+            padding-bottom: 15px;
+        }
+
+        &-title {
+            font-size: 20px;
+            font-weight: $bold;
+            color: #495662;
+        }
+
+        .ui-datepicker-prev {
+            background: url("/images/svg/chevron-right.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 20px;
+            width: 12px;
+            top: 12px;
+            transform: scaleX(-1);
+            cursor: pointer;
+
+            &.ui-state-hover {
+                border: none;
+            }
+
+            .ui-icon, span {
+                background: none;
+            }
+        }
+
+        .ui-datepicker-next {
+            background: url("/images/svg/chevron-right.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 20px;
+            width: 12px;
+            top: 12px;
+            cursor: pointer;
+
+            &.ui-state-hover {
+                border: none;
+            }
+
+            .ui-icon, span {
+                background: none;
+            }
+        }
+
+        td {
+            position: relative;
+            margin: 0 auto;
+            border-radius: 50%;
+            padding: 5px;
+            text-align: center;
+            background-color: transparent !important;
+
+            &:hover .ui-state-default {
+                background: #f6f6f6;
+            }
+
+            a, span {
+                border: none;
+                background-color: $c-white;
+                text-align: center;
+                font-size: 16px;
+                font-weight: $bold;
+                color: $c-dark;
+                border-radius: 50%;
+                display: inline-block;
+                width: 30px;
+
+                @media only screen and (max-width: 380px) {
+                    font-size: 14px;
+                    width: 27px;
+                }
+            }
+            // Current Day
+            &.ui-datepicker-today {
+                > a, > span {
+                    background-color: #85ddc3;
+                    color: $c-white;
+                }
+
+                &:hover {
+                    > a, > span {
+                        background-color: $c-red;
+                    }
+                }
+            }
+            // Selected Day
+
+            &.ui-datepicker-current-day {
+                a, span {
+                    background-color: $c-green;
+                    color: $c-white;
+                }
+
+                &:hover {
+                    > a, > span {
+                        background-color: $c-red;
+                    }
+                }
+            }
+        }
+    }
+
+    .legend {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        border-radius: 50%;
+        background-color: #e1e8ed;
+        color: $c-white !important;
+
+        &__red {
+            background-color: #f1334e;
+
+            > a, > span {
+                background-color: #f1334e !important;
+                color: $c-white !important;
+            }
+        }
+
+        &__yellow {
+            background-color: #f7be26;
+
+            > a, > span {
+                background-color: #f7be26 !important;
+                color: $c-white !important;
+            }
+        }
+
+        &__bluegreen {
+            background-color: #34beb8;
+
+            > a, > span {
+                background-color: #34beb8 !important;
+                color: $c-white !important;
+            }
+        }
+
+        &__orange {
+            background-color: #ff9e33;
+
+            > a, > span {
+                background-color: #ff9e33 !important;
+                color: $c-white !important;
+            }
+        }
+
+        &__green {
+            background-color: #94a522;
+
+            > a, > span {
+                background-color: #94a522 !important;
+                color: $c-white !important;
+            }
+        }
+
+        &__blue {
+            background-color: #67cef4;
+
+            > a, > span {
+                background-color: #67cef4 !important;
+                color: $c-white !important;
+            }
+        }
+    }
+
+    .calendar__rate {
+        padding-top: 25px;
+        padding-bottom: 20px;
+        margin-bottom: 8px;
+
+        ul {
+            @include reset-list;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 825px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            width: 100px;
+
+            &:nth-child(4) {
+                width: 100px;
+            }
+        }
+    }
+}
+
+
+@include media("<md") {
+    .section__calendar {
+
+        .calendar__rate {
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+@include media("<sm") {
+    .section__calendar {
+
+        h3 {
+            margin-bottom: 15px;
+        }
+
+        .calendar__item-details {
+            position: relative;
+            margin-top: 10px;
+
+            ul {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .ui-widget {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .ui-datepicker {
+            td {
+                a, span {
+                    font-size: 14px;
+                    width: 27px;
+                }
+            }
+        }
+
+        .ui-datepicker-multi-2 .ui-datepicker-group {
+            width: 100%;
+
+            &.ui-datepicker-group-first {
+                padding-right: 0;
+            }
+
+            &.ui-datepicker-group-last {
+                padding-left: 0;
+            }
+        }
+
+
+        .calendar__rate {
+            li {
+                &:nth-child(4) {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+
+@include media("<380px") {
+    .section__calendar {
+        .ui-widget {
+            padding: 15px 10px;
+        }
+
+        a, span {
+            font-size: 14px;
+        }
+    }
+}
+
+
+
+
+
+/* Calendar Section inside Lodging Content */
+@media (max-width: 1200px) {
+    .section__lodgingcontent .section__calendar {
+        .ui-widget {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .ui-datepicker {
+            td {
+                a, span {
+                    font-size: 14px;
+                    width: 27px;
+                }
+            }
+        }
+
+        .calendar__rate {
+
+            li {
+                &:nth-child(4) {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 785px) {
+    .section__lodgingcontent .section__calendar {
+        .calendar__item-details {
+            position: relative;
+            margin-top: 10px;
+
+            ul {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .ui-datepicker-multi-2 .ui-datepicker-group {
+            width: 100%;
+
+            &.ui-datepicker-group-first {
+                padding-right: 0;
+            }
+
+            &.ui-datepicker-group-last {
+                padding-left: 0;
+            }
+        }
+    }
+}

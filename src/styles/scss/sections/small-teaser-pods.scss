@@ -1,0 +1,491 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+/// <reference path="../utilities/mixins/mixins.scss" />
+
+.section__smallteaserpods {
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    a {
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    .top-heading {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .top-heading {
+        margin-bottom: 20px;
+    }
+
+    .pull-left {
+        text-align: left !important;
+    }
+
+    h4 {
+        font-weight: $semibold;
+    }
+
+    .heading {
+        font-family: $basefont;
+        font-weight: normal !important;
+        font-size: 32px;
+        line-height: 1.58rem;
+        margin-bottom: 10px;
+        text-align: inherit;
+    }
+
+    .subheading {
+        font-weight: normal !important;
+        margin-bottom: 20px;
+        font-size: 28px;
+        line-height: 1.58rem;
+        text-align: inherit;
+    }
+
+    .content__mid {
+        color: #fff;
+    }
+
+    .pods {
+        &__lists {
+            @include reset-list;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-right: -30px;
+            margin-left: -30px;
+            /*.pods__item:hover {
+                &.pods__item--bordered .pods__item--wrapper {
+                    box-shadow: 0px 0px 8px 2px lightgrey;
+                }
+            }*/
+        }
+
+        &__item--wrapper {
+            position: relative;
+            display: flex;
+            flex-flow: column;
+            transition: all $dur-1 ease-in;
+        }
+
+        &__lists--1 {
+            .pods__item {
+                width: 100%;
+
+                .pods__image picture {
+                    height: 305px;
+                }
+            }
+
+            &.lists__1--small {
+                .pods__item {
+                    .pods__image picture {
+                        height: 200px;
+                    }
+                }
+            }
+        }
+
+        &__lists--2 {
+            .pods__item {
+                width: 50%;
+
+                .pods__image picture {
+                    height: 305px;
+                }
+            }
+
+            &.lists__2--small {
+                .pods__item {
+                    .pods__image picture {
+                        height: 200px;
+                    }
+                }
+            }
+        }
+
+        &__lists--3 .pods__item {
+            width: 33.33333%;
+
+            .content {
+                .pods__text {
+                    padding: 15px 0 0;
+                }
+            }
+
+            .content__top .pods__text {
+                padding: 0px;
+            }
+
+            .heading {
+                font-size: 28px;
+                margin-bottom: 10px;
+                line-height: 1.58rem;
+            }
+
+            .subheading {
+                font-size: 24px;
+                margin-bottom: 10px;
+                line-height: 1.58rem;
+            }
+        }
+
+        &__lists--4 .pods__item {
+            width: 25%;
+
+            .content {
+                .pods__text {
+                    padding: 15px 0 0;
+                }
+            }
+
+            .content__top .pods__text {
+                padding: 0px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.58remrem;
+            }
+
+            .heading {
+                font-size: 24px;
+                margin-bottom: 10px;
+                line-height: 1.58rem;
+            }
+
+            .subheading {
+                font-size: 20px;
+                margin-bottom: 10px;
+                line-height: 1.58rem;
+            }
+
+            .pods__image picture {
+                height: 200px;
+            }
+        }
+
+        &__item {
+            overflow: hidden;
+            padding: 0 15px 30px;
+
+
+            &.no-zoom {
+                .pods__image:hover picture {
+                    transform: scale(1);
+                }
+            }
+
+            > a {
+                color: inherit;
+            }
+        }
+
+        &__item--bordered {
+            .pods__item--wrapper {
+                box-shadow: 0px 1px 3px 0px lightgrey;
+                border-radius: 5px;
+                border: 1px solid rgba(211,211,211, 0.5);
+                height: 100%;
+
+                @include media("<sm") {
+                    height: auto;
+                }
+            }
+
+            .pods__text {
+                padding: 15px !important;
+            }
+        }
+
+        &__image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+
+            &:hover picture {
+                transform: scale(1.1);
+            }
+
+            picture {
+                width: 100%;
+                height: 250px;
+                overflow: hidden;
+                display: flex;
+                transition: transform $dur-1 ease-in;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .pods__image-title {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                transform: translateY(-50%);
+                text-align: center;
+                color: $c-white;
+
+                .heading {
+                    font-size: 46px;
+                    line-height: 50px;
+
+                    @include media("<md") {
+                        font-size: 32px;
+                        line-height: 1.3;
+                    }
+                }
+
+                p {
+                    color: inherit;
+                }
+
+                &.bottom-align {
+                    transform: none;
+                    bottom: 0% !important;
+                    top: auto;
+                }
+
+                &.pull-left{
+                    padding-left:15px;
+                }
+            }
+        }
+    }
+
+
+    small {
+        font-style: italic;
+        font-weight: $semibold;
+        text-align: center;
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        color: $bg-dark;
+    }
+
+    .pods__text {
+        font-family: $opensans;
+        padding-top: 25px;
+
+        a:not(.button) {
+            margin-bottom: 10px;
+            color: $bg-green;
+            font-size: 16px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        a.button {
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0px 12px;
+        }
+
+        picture,
+        svg {
+            float: left;
+            width: 50%;
+            height: auto;
+            padding: 0 10px 10px 0;
+            display: flex;
+            align-items: center;
+            align-content: center;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        svg {
+            max-width: 100%;
+        }
+
+        p {
+            color: inherit;
+        }
+    }
+
+    .content {
+        &__top {
+            .pods__text {
+                order: -1;
+                padding: 0 0 25px;
+
+                @include media("<sm") {
+                    order: 1;
+                    padding-top: 25px;
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        &__mid {
+
+            .pods__text {
+                position: absolute;
+                top: auto;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                text-align: center;
+                padding: 0 15px;
+                text-shadow: 1px 1px 6px #000;
+                padding-bottom: 0px;
+
+                a, p {
+                    color: inherit;
+                }
+
+                h4 {
+                    font-weight: $semibold;
+                    color: $c-white;
+                }
+
+                p:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                picture {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .pods__lists--3,
+    .pods__lists--4 {
+        .content__mid {
+
+            .pods__text {
+                a {
+                    font-size: 14px;
+                    margin-bottom: 0;
+                }
+
+                h4 {
+                    font-size: 24px;
+                    margin-bottom: 0;
+                }
+
+                p:not(.heading,.subheading) {
+                    font-size: 16px;
+                    line-height: 1.3;
+                }
+            }
+        }
+    }
+
+    .label {
+        font-size: 0.8rem;
+        margin-bottom: 2px;
+    }
+
+    @include media("<1200px") {
+
+        .pods__text {
+            picture, svg {
+                float: left;
+                margin: 0 auto 20px;
+                width: 100%;
+                height: auto;
+                max-width: 45%;
+            }
+        }
+    }
+
+    @include media("<md") {
+
+        .pods {
+
+            &__lists--1 .pods__item {
+                .pods__image {
+                    picture {
+                        height: 250px;
+                    }
+                }
+            }
+
+
+            &__lists--2 .pods__item {
+                .pods__image {
+                    picture {
+                        height: 250px;
+                    }
+                }
+            }
+
+            &__lists--3,
+            &__lists--4 {
+                .pods__image {
+                    picture {
+                        height: 200px;
+                    }
+                }
+            }
+
+            &__lists--4 .pods__item {
+                flex-basis: 50%;
+            }
+        }
+    }
+
+
+    @include media("<sm") {
+        .pods {
+
+            &__lists--1 .pods__item {
+                .pods__image {
+                    picture {
+                        height: 200px;
+                    }
+                }
+            }
+
+            &__lists--2 .pods__item {
+                .pods__image {
+                    picture {
+                        height: 200px;
+                    }
+                }
+            }
+
+            &__image picture {
+                height: 200px;
+            }
+
+
+            &__lists--1,
+            &__lists--2,
+            &__lists--3,
+            &__lists--4 {
+                .pods__item {
+                    flex-basis: 100%;
+                }
+            }
+        }
+
+        .content__mid .pods__text {
+            padding-bottom: 0;
+        }
+    }
+}

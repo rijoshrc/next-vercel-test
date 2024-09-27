@@ -1,0 +1,68 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+
+.section__checkboxes {
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    &--vertical {
+        .row {
+            flex-flow: column;
+        }
+    }
+
+    .feature-label {
+        display: flex;
+        margin-bottom: 20px;
+
+        i {
+            flex: 0 0 45px;
+
+            &:before {
+                color: #e62b32;
+                font-size: 40px;
+            }
+        }
+
+        div {
+            display: inline;
+            font-size: 24px;
+            word-break: break-word;
+            padding: 6px 0px 0px 5px;
+        }
+    }
+
+    .row > .feature-label {
+        margin-right: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    @include media("<md") {
+        .feature-label {
+            margin-bottom: 20px;
+
+            i {
+                width: 35px;
+                height: 30px;
+            }
+
+            div {
+                font-size: 20px;
+                padding: 5px 0px 0px 0px;
+            }
+        }
+
+        .row > .feature-label {
+            width: 50%;
+            margin-right: 0;
+        }
+    }
+
+    @include media("<sm") {
+        .row > .feature-label {
+            width: 100%;
+        }
+    }
+}

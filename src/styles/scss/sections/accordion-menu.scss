@@ -1,0 +1,226 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+
+#contentWithMenuPage {
+    .section__accordionmenu .container {
+        max-width: 1425px;
+    }
+
+
+    @include media("<md") {
+        .section__accordionmenu .container {
+            max-width: 720px;
+        }
+    }
+}
+
+
+.section__accordionmenu {
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+    div[class^="col-"] {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .col-lg-3 {
+        + .col-lg-9 {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+    }
+
+    .col-lg-9 {
+        flex: 0 0 auto;
+        max-width: 1140px;
+    }
+
+    h1, h2 {
+        margin-bottom: 20px;
+    }
+
+    .sidemenu {
+        margin: 15px 0;
+        position: sticky;
+        top: 110px;
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
+    }
+
+    .sidemenu .sidemenu-content {
+        padding-top: 15px;
+        padding-left: 15px;
+    }
+
+    .sidemenu ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidemenu ul li .btn-smenu {
+        position: relative;
+        border-bottom: 1px solid;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            order: -1;
+            margin-bottom: 0;
+        }
+
+        button {
+            background-color: $c-white;
+            border: none;
+            margin-bottom: 10px;
+
+            &[aria-expanded="true"] {
+                + a {
+                    font-weight: $semibold;
+                }
+
+                &:after {
+                    content: "";
+                    top: 2px;
+                    transform: scaleY(-1);
+                }
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .sidemenu ul li button,
+    .sidemenu ul li .sm-toggler {
+        position: relative;
+    }
+
+    .sidemenu ul li button:after,
+    .sidemenu ul li .sm-toggler:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 10px;
+        background: url(/images/svg/chevron-down.svg) no-repeat;
+        width: 15px;
+        height: 15px;
+    }
+
+    .sidemenu ul li .smRotate:after {
+        //transform: rotate(90deg) !important;
+        //transition: 0.1s;
+    }
+
+    .sidemenu ul li a {
+        display: block;
+        color: #495662;
+        margin: 5px 0px;
+        padding-left: 10px;
+        overflow-wrap: break-word;
+        hyphens: auto;
+
+        &.active {
+            font-weight: $semibold;
+        }
+    }
+
+    .sidemenu ul li a:hover {
+        text-decoration: none;
+    }
+
+    .sidemenu ul li .btn-submenu {
+        width: 100%;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            order: -1;
+            margin-bottom: 0;
+            padding-right: 10px;
+        }
+
+        button {
+            background-color: $c-white;
+            border: none;
+            margin-bottom: 10px;
+            left: -10px;
+
+
+            &[aria-expanded="true"] {
+                + a {
+                    font-weight: $semibold;
+                }
+
+                &:after {
+                    content: "";
+                    top: 2px;
+                    transform: scaleY(-1);
+                }
+            }
+
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .sidemenu ul li div .submenu {
+        padding-top: 5px;
+
+        a {
+            padding-left: 25px;
+        }
+
+        .submenu {
+            a {
+                padding-left: 50px;
+            }
+
+            .submenu {
+                a {
+                    padding-left: 75px;
+                }
+
+                .submenu {
+                    a {
+                        padding-left: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    .sidemenu .active {
+        font-weight: bold;
+    }
+
+    @media (max-width: 991px) and (min-width: 576px) {
+
+        .sidemenu ul li {
+            width: 100%;
+            padding: 5px;
+        }
+    }
+
+
+    @include media("<md") {
+        padding-bottom: 30px;
+        padding-top: 0px !important;
+
+        .col-lg-3 {
+            display: none;
+
+            + .col-lg-9 {
+                flex: 0 0 auto;
+                max-width: 100%;
+            }
+        }
+    }
+}

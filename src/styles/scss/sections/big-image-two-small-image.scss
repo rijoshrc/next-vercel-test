@@ -1,0 +1,240 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+
+.section__bigsmallimages {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: $c-white;
+
+    .columns__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .column {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0 15px;
+        height: 420px;
+
+        &__small {
+            align-self: flex-start;
+            width: 30%;
+        }
+
+        &__big {
+            width: 70%;
+        }
+    }
+
+    &--flip {
+        .column__small {
+            order: 1;
+
+            &.column__text {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    div[id*="map"] {
+        width: 100%;
+        height: 100%;
+    }
+
+    h3 {
+        font-weight: $medium;
+    }
+
+    h3, h6 {
+        margin-bottom: 15px;
+    }
+
+
+    picture {
+        width: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    iframe {
+        width: 100%;
+
+        + div {
+            border: none !important;
+        }
+    }
+
+    .button {
+        margin-top: 10px;
+    }
+
+    &.section__imagetext--flip {
+        .column:first-child {
+            order: 1;
+        }
+    }
+
+    .content__row {
+        width: 100%;
+        height: 46%;
+
+        picture {
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 5px;
+            }
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        &.content__img + .content__row.content__text {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        &.content__text {
+            height: auto;
+            margin-bottom: 15px;
+            line-height: 1.58;
+            overflow-y: auto;
+            max-height: 350px;
+            /* width */
+            &::-webkit-scrollbar {
+                width: 7px;
+            }
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: $bg-green;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .mapfeatured-info {
+        font-weight: bold;
+        padding: 15px 0px 0px 15px;
+    }
+
+    .gm-style .gm-style-iw-c {
+        padding: 0 !important;
+        border-radius: 5px;
+    }
+
+    .gm-style-iw-d + button {
+        display: none !important;
+    }
+
+    @include media("<1200px") {
+        .column {
+            height: 325px;
+
+            &__small {
+                width: 40%;
+            }
+
+            &__big {
+                width: 60%;
+            }
+        }
+
+        .content__row {
+            &:first-child {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    @include media("<md") {
+        .column {
+            height: auto;
+        }
+
+        picture {
+            height: 100%;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    @include media("<sm") {
+        .column {
+
+            &__small {
+                flex-flow: row;
+                width: 100%;
+            }
+
+            &__big {
+                width: 100%;
+            }
+        }
+
+
+        &--flip {
+            .column__small {
+                margin-bottom: 0;
+            }
+
+            .column__big {
+                margin-bottom: 25px;
+            }
+        }
+
+        .content__row {
+            width: 48%;
+            height: auto;
+        }
+
+        div[id*="map"] {
+            height: 300px;
+        }
+    }
+
+    @include media("<480px") {
+        .column {
+
+            &__small {
+                flex-flow: column;
+                margin-bottom: 25px;
+            }
+        }
+
+        &--flip {
+            .column__small {
+                margin-bottom: 0;
+            }
+        }
+
+
+        .content__row {
+            width: 100%;
+
+            &.content__text {
+                max-height: none;
+            }
+        }
+    }
+}
+

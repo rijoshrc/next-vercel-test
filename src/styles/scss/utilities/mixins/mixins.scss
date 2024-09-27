@@ -1,0 +1,83 @@
+﻿/// <reference path="../variables.scss" />
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* width */
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $bg-green;
+        border-radius: 5px;
+    }
+}
+
+
+@mixin background-control {
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+@mixin slider-arrows {
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+        top: 50%;
+        left: auto;
+        right: auto;
+        z-index: 1;
+        appearance: none;
+        -webkit-appearance: none;
+        border: none;
+        background-color: transparent;
+        color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .slick-prev {
+        left: -4px;
+
+        &:before {
+            content: "";
+            background: url("/images/svg/chevron-left-shadow.svg");
+            @include background-control;
+            background-size: contain;
+            height: 40px;
+            width: 35px;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: auto;
+        }
+    }
+
+    .slick-next {
+        right: -3px;
+
+        &:before {
+            content: "";
+            background: url("/images/svg/chevron-right-shadow.svg");
+            @include background-control;
+            background-size: contain;
+            height: 40px;
+            width: 35px;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: auto;
+            right: 3px;
+        }
+    }
+}

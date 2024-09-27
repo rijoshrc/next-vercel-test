@@ -1,0 +1,8 @@
+For SEO
+
+You're a senior next js developer with deep knowledge in the new features in next js 14 caching and SEO optimization. Assist me on building an application using next js 14 with better SEO performance when scanned with the lighthouse. Now there're some issues loading the images the landing page. The first section is a carousel with multiple images animating. the images are now background images added using CSS. Check the following component.
+
+
+Component building
+
+You're a senior next js developer. Help me to migrate the application done in Umbraco to Next js with all the possibile optimization. I will be providing the cshtml file and the data that uses too. You need to build a typescript component with the type definition from the data.

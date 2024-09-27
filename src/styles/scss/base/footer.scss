@@ -1,0 +1,308 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+
+footer {
+    background-color: $bg-green;
+    font-family: $basefont;
+}
+
+
+.footer__top {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    color: $c-white;
+
+    .col-sm:last-child {
+        border-left: solid 2px $c-white;
+    }
+
+    &-heading {
+        font-size: 25px;
+        font-weight: $bold;
+        line-height: 1.08;
+        margin-bottom: 25px;
+    }
+
+    .col-sm {
+        max-width: 25%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+    }
+
+    figure {
+        margin: 20px 0 0;
+
+        img {
+            width: 100%;
+            height: 82px;
+            border-radius: 0.15rem;
+            max-width: 100%;
+        }
+
+        &.happy__icon {
+            text-align: right;
+
+            img {
+                width: auto;
+            }
+        }
+
+        &.expert-seal {
+            margin-top: 0;
+
+            img {
+                max-width: 160px;
+                height: auto;
+            }
+        }
+    }
+
+    .footer__links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding-bottom: 3px;
+            margin-bottom: 18px;
+            font-size: 16px;
+            line-height: 18px;
+
+
+            &:hover a:after,
+            &.active a:after {
+                width: 100%;
+            }
+        }
+
+        a {
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 1px;
+                top: auto;
+                bottom: -2px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                background-color: $c-red;
+                transition: width $dur-2 ease-in;
+            }
+        }
+
+
+        &.social__icons {
+            display: flex;
+
+            a {
+                position: relative;
+                width: 25px;
+                height: 25px;
+                display: block;
+                margin-right: 20px;
+                text-align: center;
+
+                &:after {
+                    content: none;
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: $c-white;
+                    width: 27px;
+                    height: 27px;
+                    border-radius: 50%;
+                    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+                    transition: all $dur-2 ease-in;
+                }
+
+                &:hover {
+                    &:before {
+                        background-color: $bg-green;
+                    }
+
+                    svg {
+                        path,
+                        g circle {
+                            fill: $c-white;
+                        }
+                    }
+                }
+            }
+
+            svg {
+                position: relative;
+                z-index: 1;
+                top: 3px;
+                left: 1px;
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                border-radius: 2px;
+
+                path {
+                    fill: $bg-green;
+                    transition: fill $dur-2 ease-in;
+                }
+
+                &.youtube {
+                    width: 20px;
+                    height: 20px;
+                    left: 2px;
+                }
+            }
+        }
+    }
+
+    span {
+        font-size: 16px;
+        line-height: 18px;
+        display: block;
+        margin-bottom: 18px;
+
+        strong {
+            display: block;
+        }
+    }
+
+
+    @include media("<sm") {
+        width: 100%;
+
+        .row {
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .col-sm {
+            max-width: 50%;
+            width: 50%;
+            flex-basis: 100%;
+            margin-bottom: 50px;
+        }
+    }
+
+    @include media("<576px") {
+        width: 100%;
+
+        .col-sm {
+            max-width: 100%;
+            width: 100%;
+
+            &:last-child {
+                border-left: none;
+                margin-bottom: 0;
+            }
+        }
+
+
+        figure.happy__icon {
+            text-align: center;
+        }
+    }
+
+    .pe-richsnippets{
+        margin-bottom:10px;
+        
+        span{
+            display:inline;
+        }
+
+        .pe_u > span{
+            display:inline;
+            font-size:13px;
+        }
+
+    }
+}
+
+
+
+
+
+.footer__bottom {
+    background-color: $bg-dark;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .col__left {
+        margin-left: -5px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            display: inline;
+            font-size: 16px;
+            line-height: 1.13;
+            border-right: 1px solid $c-white;
+            padding: 0 5px;
+
+            &:last-child {
+                border: none;
+            }
+
+            a {
+                color: $c-white;
+                text-decoration: none;
+                transition: color $dur-2 ease-in;
+
+                &:hover {
+                    color: $bg-green
+                }
+            }
+        }
+    }
+
+
+    .col__right {
+
+        p {
+            color: $c-white;
+            font-size: 12px;
+            margin: 0;
+        }
+    }
+
+
+
+    @include media("<md") {
+        .col__left ul {
+            margin-bottom: 20px;
+        }
+    }
+
+    @include media("<sm") {
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .col__left {
+            width: 100%;
+        }
+
+        .col__right {
+            width: 100%;
+        }
+    }
+}

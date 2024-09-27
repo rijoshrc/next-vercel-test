@@ -1,0 +1,27 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+
+.section__divider {
+    position: relative;
+
+    .divider {
+        height: 3px;
+        width: 555px;
+        margin: 50px auto;
+        background-color: #ebebeb;
+    }
+
+    &--fullwidth {
+
+        .divider {
+            width: 100%;
+        }
+    }
+
+    @include media("<sm") {
+        .divider {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+}

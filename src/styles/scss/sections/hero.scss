@@ -1,0 +1,80 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+/// <reference path="../utilities/animation.scss" />
+header + .section__hero {
+    padding-top: 0;
+}
+
+.section__hero {
+    &:last-of-type {
+        padding-bottom: 0;
+    }
+
+    .hero__wrapper {
+        display: block;
+        height: 410px;
+        overflow: hidden;
+        position: relative;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .container {
+        position: absolute;
+        bottom: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 60px;
+        line-height: 1;
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+        color: $c-white;
+        flex-basis: unset;
+        margin-bottom: 10px;
+    }
+
+
+    @include media("<1200px") {
+        .hero__wrapper {
+            height: 350px;
+        }
+
+        .heading {
+            font-size: 40px;
+        }
+    }
+
+    @include media("<md") {
+
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+    }
+
+    @include media("<sm") {
+        .hero__wrapper {
+            height: 250px;
+        }
+
+        .heading {
+            font-size: 30px;
+        }
+    }
+
+    @include media("<480px") {
+        .hero__wrapper {
+            height: 220px;
+        }
+    }
+}

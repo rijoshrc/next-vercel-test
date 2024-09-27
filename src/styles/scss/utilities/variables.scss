@@ -1,0 +1,42 @@
+﻿// Text Colors
+$c-white: #ffffff;
+$c-green: #0f7883;
+$c-green-dark: #033540;
+$c-dark: #212529;
+$c-darker: #212529; 
+$c-grey: #8d8d8d;
+$c-red: #e62b32;
+
+
+// Button Colors
+$c-red-gradient: linear-gradient(to bottom,rgba(230,43,50,1) 0%,rgba(199,37,43,1) 100%), color-stop(0%, rgba(255, 255, 255, 0.9)), color-stop(100%, rgba(0, 0, 0, 0.6));
+
+
+// Hover Colors
+$c-red-hover: #b1171d;
+
+
+// Background Colors
+$bg-green: #037883;
+$bg-dark: #033540;
+$bg-grey: #f2f2f2;
+$bg-grey-2: #eeeeee;
+
+
+// Font Family
+$basefont: var(--font-quattrocento-sans-regular), serif;
+$caveat: var(--font-caveat-regular), cursive;
+$opensans: var(--font-open-sans-regular), sans-serif;
+
+
+// Font Weight
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+
+
+// Transition Duration
+$dur-1: .25s;
+$dur-2: .15s;
+$dur-3: .35s;

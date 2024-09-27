@@ -1,0 +1,598 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("../../flaticon-fonts/flaticon.ttf") format("truetype"),
+url("../../flaticon-fonts/flaticon.woff") format("woff"),
+url("../../flaticon-fonts/flaticon.woff2") format("woff2"),
+url("../../flaticon-fonts/flaticon.eot") format("embedded-opentype"),
+url("../../flaticon-fonts/flaticon.svg") format("svg");
+     font-display: swap;
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+ 
+$flaticon-map: (
+    "house": "\f101",
+    "bed": "\f102",
+    "bed-1": "\f103",
+    "group": "\f104",
+    "pawprint": "\f105",
+    "bathtub": "\f106",
+    "restaurant": "\f107",
+    "shopping-cart": "\f108",
+    "field": "\f109",
+    "sea": "\f10a",
+    "sunset": "\f10b",
+    "tool": "\f10c",
+    "placeholder-filled-point": "\f10d",
+    "w-lan": "\f10e",
+    "schwimmbad": "\f10f",
+    "sauna": "\f110",
+    "heies-bad": "\f111",
+    "beach": "\f112",
+    "toilet": "\f113",
+    "restroom": "\f114",
+    "no-smoking": "\f115",
+    "television": "\f116",
+    "dishwasher": "\f117",
+    "washing-machine": "\f118",
+    "tumble-dryer": "\f119",
+    "stove": "\f11a",
+    "thermometer": "\f11b",
+    "ping-pong": "\f11c",
+    "degrees": "\f11d",
+    "fence": "\f11e",
+    "desert": "\f11f",
+    "like": "\f120",
+    "like-1": "\f121",
+    "info": "\f122",
+    "share": "\f123",
+    "printer": "\f124",
+    "printer-1": "\f125",
+    "compact-disc": "\f126",
+    "dvd-player": "\f127",
+    "radio": "\f128",
+    "satellite-tv": "\f129",
+    "floor": "\f12a",
+    "linoleum": "\f12b",
+    "carpet": "\f12c",
+    "bed-2": "\f12d",
+    "single-bed": "\f12e",
+    "bunk-bed": "\f12f",
+    "extractor": "\f130",
+    "refrigerator": "\f131",
+    "freezer": "\f132",
+    "oven": "\f133",
+    "cooking-stove": "\f134",
+    "electric-stove": "\f135",
+    "baby-bath-tub": "\f136",
+    "baby-tub": "\f137",
+    "shower": "\f138",
+    "washbasin": "\f139",
+    "changing-table": "\f13a",
+    "underfloor-heating": "\f13b",
+    "radiator": "\f13c",
+    "crib": "\f13d",
+    "table": "\f13e",
+    "sunbed": "\f13f",
+    "parasol": "\f140",
+    "bbq-grill": "\f141",
+    "grill": "\f142",
+    "sandbox": "\f143",
+    "swings": "\f144",
+    "football": "\f145",
+    "billard": "\f146",
+    "billard-1": "\f147",
+    "darts": "\f148",
+    "campfire": "\f149",
+    "shower-1": "\f14a",
+    "paws": "\f14b",
+    "floor-1": "\f14c",
+    "high-chair": "\f14d",
+    "wippe": "\f14e",
+    "terrace": "\f14f",
+    "table-1": "\f150",
+    "parking-area": "\f151",
+    "swimming": "\f152",
+    "whirlpool": "\f153",
+    "fish": "\f154",
+    "sunrise": "\f155",
+    "renovation": "\f156",
+    "electric-kettle": "\f157",
+    "game-console": "\f158",
+    "eco-friendly": "\f159",
+    "organic-product": "\f15a",
+    "dog": "\f15b",
+    "dog-house": "\f15c",
+    "sport": "\f15d",
+    "bicycle": "\f15e",
+    "billiard-ball": "\f15f",
+    "water-slide": "\f160",
+    "calendar": "\f161",
+    "administration": "\f162",
+    "calendar-1": "\f163",
+    "pin": "\f164",
+    "location-pin": "\f165",
+    "ironing-board": "\f166",
+    "iron": "\f167",
+    "shower-head": "\f168",
+    "boat": "\f169",
+    "boating": "\f16a",
+    "fishing": "\f16b",
+    "fishing-1": "\f16c",
+    "fishing-2": "\f16d",
+    "playground": "\f16e",
+    "shed": "\f16f",
+    "shed-1": "\f170",
+    "golfing": "\f171",
+    "golf": "\f172",
+    "rainforest": "\f173",
+    "giraffe": "\f174",
+    "blocks": "\f175",
+    "rollercoaster": "\f176",
+    "amusement-park": "\f177",
+    "shark": "\f178",
+    "polar-bear": "\f179",
+    "air-conditioner": "\f17a",
+    "air-conditioning": "\f17b",
+    "wheelchair": "\f17c",
+    "knife": "\f17d",
+    "electric-car": "\f17e",
+    "sofa-bed": "\f17f",
+    "solar-energy": "\f180",
+    "solar-panel": "\f181",
+    "solarium": "\f182",
+    "trampoline": "\f183",
+    "youth": "\f184",
+    "ferry": "\f185",
+    "lighthouse": "\f186",
+    "business-and-finance": "\f187",
+    "sea-life": "\f188",
+    "sea-snail": "\f189",
+    "cannon": "\f18a",
+    "starfish": "\f18b",
+    "bicycle-1": "\f18c",
+    "apple-tv": "\f18d",
+    "apple-tv-1": "\f18e",
+    "apple": "\f18f",
+);
+
+.flaticon-house:before {
+    content: map-get($flaticon-map, "house");
+}
+.flaticon-bed:before {
+    content: map-get($flaticon-map, "bed");
+}
+.flaticon-bed-1:before {
+    content: map-get($flaticon-map, "bed-1");
+}
+.flaticon-group:before {
+    content: map-get($flaticon-map, "group");
+}
+.flaticon-pawprint:before {
+    content: map-get($flaticon-map, "pawprint");
+}
+.flaticon-bathtub:before {
+    content: map-get($flaticon-map, "bathtub");
+}
+.flaticon-restaurant:before {
+    content: map-get($flaticon-map, "restaurant");
+}
+.flaticon-shopping-cart:before {
+    content: map-get($flaticon-map, "shopping-cart");
+}
+.flaticon-field:before {
+    content: map-get($flaticon-map, "field");
+}
+.flaticon-sea:before {
+    content: map-get($flaticon-map, "sea");
+}
+.flaticon-sunset:before {
+    content: map-get($flaticon-map, "sunset");
+}
+.flaticon-tool:before {
+    content: map-get($flaticon-map, "tool");
+}
+.flaticon-placeholder-filled-point:before {
+    content: map-get($flaticon-map, "placeholder-filled-point");
+}
+.flaticon-w-lan:before {
+    content: map-get($flaticon-map, "w-lan");
+}
+.flaticon-schwimmbad:before {
+    content: map-get($flaticon-map, "schwimmbad");
+}
+.flaticon-sauna:before {
+    content: map-get($flaticon-map, "sauna");
+}
+.flaticon-heies-bad:before {
+    content: map-get($flaticon-map, "heies-bad");
+}
+.flaticon-beach:before {
+    content: map-get($flaticon-map, "beach");
+}
+.flaticon-toilet:before {
+    content: map-get($flaticon-map, "toilet");
+}
+.flaticon-restroom:before {
+    content: map-get($flaticon-map, "restroom");
+}
+.flaticon-no-smoking:before {
+    content: map-get($flaticon-map, "no-smoking");
+}
+.flaticon-television:before {
+    content: map-get($flaticon-map, "television");
+}
+.flaticon-dishwasher:before {
+    content: map-get($flaticon-map, "dishwasher");
+}
+.flaticon-washing-machine:before {
+    content: map-get($flaticon-map, "washing-machine");
+}
+.flaticon-tumble-dryer:before {
+    content: map-get($flaticon-map, "tumble-dryer");
+}
+.flaticon-stove:before {
+    content: map-get($flaticon-map, "stove");
+}
+.flaticon-thermometer:before {
+    content: map-get($flaticon-map, "thermometer");
+}
+.flaticon-ping-pong:before {
+    content: map-get($flaticon-map, "ping-pong");
+}
+.flaticon-degrees:before {
+    content: map-get($flaticon-map, "degrees");
+}
+.flaticon-fence:before {
+    content: map-get($flaticon-map, "fence");
+}
+.flaticon-desert:before {
+    content: map-get($flaticon-map, "desert");
+}
+.flaticon-like:before {
+    content: map-get($flaticon-map, "like");
+}
+.flaticon-like-1:before {
+    content: map-get($flaticon-map, "like-1");
+}
+.flaticon-info:before {
+    content: map-get($flaticon-map, "info");
+}
+.flaticon-share:before {
+    content: map-get($flaticon-map, "share");
+}
+.flaticon-printer:before {
+    content: map-get($flaticon-map, "printer");
+}
+.flaticon-printer-1:before {
+    content: map-get($flaticon-map, "printer-1");
+}
+.flaticon-compact-disc:before {
+    content: map-get($flaticon-map, "compact-disc");
+}
+.flaticon-dvd-player:before {
+    content: map-get($flaticon-map, "dvd-player");
+}
+.flaticon-radio:before {
+    content: map-get($flaticon-map, "radio");
+}
+.flaticon-satellite-tv:before {
+    content: map-get($flaticon-map, "satellite-tv");
+}
+.flaticon-floor:before {
+    content: map-get($flaticon-map, "floor");
+}
+.flaticon-linoleum:before {
+    content: map-get($flaticon-map, "linoleum");
+}
+.flaticon-carpet:before {
+    content: map-get($flaticon-map, "carpet");
+}
+.flaticon-bed-2:before {
+    content: map-get($flaticon-map, "bed-2");
+}
+.flaticon-single-bed:before {
+    content: map-get($flaticon-map, "single-bed");
+}
+.flaticon-bunk-bed:before {
+    content: map-get($flaticon-map, "bunk-bed");
+}
+.flaticon-extractor:before {
+    content: map-get($flaticon-map, "extractor");
+}
+.flaticon-refrigerator:before {
+    content: map-get($flaticon-map, "refrigerator");
+}
+.flaticon-freezer:before {
+    content: map-get($flaticon-map, "freezer");
+}
+.flaticon-oven:before {
+    content: map-get($flaticon-map, "oven");
+}
+.flaticon-cooking-stove:before {
+    content: map-get($flaticon-map, "cooking-stove");
+}
+.flaticon-electric-stove:before {
+    content: map-get($flaticon-map, "electric-stove");
+}
+.flaticon-baby-bath-tub:before {
+    content: map-get($flaticon-map, "baby-bath-tub");
+}
+.flaticon-baby-tub:before {
+    content: map-get($flaticon-map, "baby-tub");
+}
+.flaticon-shower:before {
+    content: map-get($flaticon-map, "shower");
+}
+.flaticon-washbasin:before {
+    content: map-get($flaticon-map, "washbasin");
+}
+.flaticon-changing-table:before {
+    content: map-get($flaticon-map, "changing-table");
+}
+.flaticon-underfloor-heating:before {
+    content: map-get($flaticon-map, "underfloor-heating");
+}
+.flaticon-radiator:before {
+    content: map-get($flaticon-map, "radiator");
+}
+.flaticon-crib:before {
+    content: map-get($flaticon-map, "crib");
+}
+.flaticon-table:before {
+    content: map-get($flaticon-map, "table");
+}
+.flaticon-sunbed:before {
+    content: map-get($flaticon-map, "sunbed");
+}
+.flaticon-parasol:before {
+    content: map-get($flaticon-map, "parasol");
+}
+.flaticon-bbq-grill:before {
+    content: map-get($flaticon-map, "bbq-grill");
+}
+.flaticon-grill:before {
+    content: map-get($flaticon-map, "grill");
+}
+.flaticon-sandbox:before {
+    content: map-get($flaticon-map, "sandbox");
+}
+.flaticon-swings:before {
+    content: map-get($flaticon-map, "swings");
+}
+.flaticon-football:before {
+    content: map-get($flaticon-map, "football");
+}
+.flaticon-billard:before {
+    content: map-get($flaticon-map, "billard");
+}
+.flaticon-billard-1:before {
+    content: map-get($flaticon-map, "billard-1");
+}
+.flaticon-darts:before {
+    content: map-get($flaticon-map, "darts");
+}
+.flaticon-campfire:before {
+    content: map-get($flaticon-map, "campfire");
+}
+.flaticon-shower-1:before {
+    content: map-get($flaticon-map, "shower-1");
+}
+.flaticon-paws:before {
+    content: map-get($flaticon-map, "paws");
+}
+.flaticon-floor-1:before {
+    content: map-get($flaticon-map, "floor-1");
+}
+.flaticon-high-chair:before {
+    content: map-get($flaticon-map, "high-chair");
+}
+.flaticon-wippe:before {
+    content: map-get($flaticon-map, "wippe");
+}
+.flaticon-terrace:before {
+    content: map-get($flaticon-map, "terrace");
+}
+.flaticon-table-1:before {
+    content: map-get($flaticon-map, "table-1");
+}
+.flaticon-parking-area:before {
+    content: map-get($flaticon-map, "parking-area");
+}
+.flaticon-swimming:before {
+    content: map-get($flaticon-map, "swimming");
+}
+.flaticon-whirlpool:before {
+    content: map-get($flaticon-map, "whirlpool");
+}
+.flaticon-fish:before {
+    content: map-get($flaticon-map, "fish");
+}
+.flaticon-sunrise:before {
+    content: map-get($flaticon-map, "sunrise");
+}
+.flaticon-renovation:before {
+    content: map-get($flaticon-map, "renovation");
+}
+.flaticon-electric-kettle:before {
+    content: map-get($flaticon-map, "electric-kettle");
+}
+.flaticon-game-console:before {
+    content: map-get($flaticon-map, "game-console");
+}
+.flaticon-eco-friendly:before {
+    content: map-get($flaticon-map, "eco-friendly");
+}
+.flaticon-organic-product:before {
+    content: map-get($flaticon-map, "organic-product");
+}
+.flaticon-dog:before {
+    content: map-get($flaticon-map, "dog");
+}
+.flaticon-dog-house:before {
+    content: map-get($flaticon-map, "dog-house");
+}
+.flaticon-sport:before {
+    content: map-get($flaticon-map, "sport");
+}
+.flaticon-bicycle:before {
+    content: map-get($flaticon-map, "bicycle");
+}
+.flaticon-billiard-ball:before {
+    content: map-get($flaticon-map, "billiard-ball");
+}
+.flaticon-water-slide:before {
+    content: map-get($flaticon-map, "water-slide");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon-map, "calendar");
+}
+.flaticon-administration:before {
+    content: map-get($flaticon-map, "administration");
+}
+.flaticon-calendar-1:before {
+    content: map-get($flaticon-map, "calendar-1");
+}
+.flaticon-pin:before {
+    content: map-get($flaticon-map, "pin");
+}
+.flaticon-location-pin:before {
+    content: map-get($flaticon-map, "location-pin");
+}
+.flaticon-ironing-board:before {
+    content: map-get($flaticon-map, "ironing-board");
+}
+.flaticon-iron:before {
+    content: map-get($flaticon-map, "iron");
+}
+.flaticon-shower-head:before {
+    content: map-get($flaticon-map, "shower-head");
+}
+.flaticon-boat:before {
+    content: map-get($flaticon-map, "boat");
+}
+.flaticon-boating:before {
+    content: map-get($flaticon-map, "boating");
+}
+.flaticon-fishing:before {
+    content: map-get($flaticon-map, "fishing");
+}
+.flaticon-fishing-1:before {
+    content: map-get($flaticon-map, "fishing-1");
+}
+.flaticon-fishing-2:before {
+    content: map-get($flaticon-map, "fishing-2");
+}
+.flaticon-playground:before {
+    content: map-get($flaticon-map, "playground");
+}
+.flaticon-shed:before {
+    content: map-get($flaticon-map, "shed");
+}
+.flaticon-shed-1:before {
+    content: map-get($flaticon-map, "shed-1");
+}
+.flaticon-golfing:before {
+    content: map-get($flaticon-map, "golfing");
+}
+.flaticon-golf:before {
+    content: map-get($flaticon-map, "golf");
+}
+.flaticon-rainforest:before {
+    content: map-get($flaticon-map, "rainforest");
+}
+.flaticon-giraffe:before {
+    content: map-get($flaticon-map, "giraffe");
+}
+.flaticon-blocks:before {
+    content: map-get($flaticon-map, "blocks");
+}
+.flaticon-rollercoaster:before {
+    content: map-get($flaticon-map, "rollercoaster");
+}
+.flaticon-amusement-park:before {
+    content: map-get($flaticon-map, "amusement-park");
+}
+.flaticon-shark:before {
+    content: map-get($flaticon-map, "shark");
+}
+.flaticon-polar-bear:before {
+    content: map-get($flaticon-map, "polar-bear");
+}
+.flaticon-air-conditioner:before {
+    content: map-get($flaticon-map, "air-conditioner");
+}
+.flaticon-air-conditioning:before {
+    content: map-get($flaticon-map, "air-conditioning");
+}
+.flaticon-wheelchair:before {
+    content: map-get($flaticon-map, "wheelchair");
+}
+.flaticon-knife:before {
+    content: map-get($flaticon-map, "knife");
+}
+.flaticon-electric-car:before {
+    content: map-get($flaticon-map, "electric-car");
+}
+.flaticon-sofa-bed:before {
+    content: map-get($flaticon-map, "sofa-bed");
+}
+.flaticon-solar-energy:before {
+    content: map-get($flaticon-map, "solar-energy");
+}
+.flaticon-solar-panel:before {
+    content: map-get($flaticon-map, "solar-panel");
+}
+.flaticon-solarium:before {
+    content: map-get($flaticon-map, "solarium");
+}
+.flaticon-trampoline:before {
+    content: map-get($flaticon-map, "trampoline");
+}
+.flaticon-youth:before {
+    content: map-get($flaticon-map, "youth");
+}
+.flaticon-ferry:before {
+    content: map-get($flaticon-map, "ferry");
+}
+.flaticon-lighthouse:before {
+    content: map-get($flaticon-map, "lighthouse");
+}
+.flaticon-business-and-finance:before {
+    content: map-get($flaticon-map, "business-and-finance");
+}
+.flaticon-sea-life:before {
+    content: map-get($flaticon-map, "sea-life");
+}
+.flaticon-sea-snail:before {
+    content: map-get($flaticon-map, "sea-snail");
+}
+.flaticon-cannon:before {
+    content: map-get($flaticon-map, "cannon");
+}
+.flaticon-starfish:before {
+    content: map-get($flaticon-map, "starfish");
+}
+.flaticon-bicycle-1:before {
+    content: map-get($flaticon-map, "bicycle-1");
+}
+.flaticon-apple-tv:before {
+    content: map-get($flaticon-map, "apple-tv");
+}
+.flaticon-apple-tv-1:before {
+    content: map-get($flaticon-map, "apple-tv-1");
+}
+.flaticon-apple:before {
+    content: map-get($flaticon-map, "apple");
+}

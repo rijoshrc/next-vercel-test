@@ -1,0 +1,200 @@
+
+// ==================================== custom style from cms//
+/**umb_name:My Custom Style*/
+h1.hello {
+	font-size:100px;
+}
+
+/**umb_name:My Custom Style 2*/
+.custom-style2 {
+	font-size:100px;
+}
+
+/**umb_name:H1 Site Quattro*/
+.H1sq {
+	font-size: 46px;
+	font-family: var(--font-quattrocento-sans-regular);
+	line-height: 50px;
+	margin-bottom: 10px;
+}
+
+/**umb_name:H1 Site Caveat*/
+.H1-sc {
+	font-family: var(--font-caveat-regular);
+	font-size: 60px;
+	line-height: 64px;
+	margin-bottom: 10px;
+}
+
+/**umb_name:H1 MSite Caveat*/
+.H1-msc {
+	font-family: var(--font-caveat-regular);
+	font-size: 50px;
+	line-height: 54px;
+	margin-bottom: 10px;
+}
+
+/**umb_name:H2 Site Quattro*/
+.H2-sq {
+	font-size: 32px;
+	font-family: var(--font-quattrocento-sans-regular);
+	line-height: 36px;
+	margin-bottom: 10px;
+}
+
+/**umb_name:H2 Site Caveat*/
+.H2-sc {
+	font-family: var(--font-caveat-regular);
+	font-size: 46px;
+	text-align: center !important;
+	line-height: 50px;
+	margin-bottom: 15px !important;
+}
+
+/**umb_name:H3 Site Quattro*/
+.H3-sq {
+	font-size: 24px;
+	font-family: var(--font-quattrocento-sans-regular);
+	line-height: 27px;
+	margin-bottom: 10px;
+}
+
+/**umb_name:H4 Site Quattro*/
+.H4sq {
+	font-size: 20px;
+	font-family: var(--font-quattrocento-sans-regular);
+	line-height: 24px;
+	margin-bottom: 10px;
+}
+
+/**umb_name:Font Size 38px*/
+.fs38 {
+	font-size: 38px;
+	font-family: var(--font-quattrocento-sans-regular);
+	line-height: 42px;
+	margin-bottom: 10px;
+}
+
+/**umb_name:Table VA top*/
+.TabVAT TD {
+	vertical-align:top;
+}
+
+/**umb_name:Texttrennung*/
+.hyph {
+	hyphens: auto;
+}
+
+// ====================================//
+
+
+.se-pre-con {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(/images/_global/preloader.gif) center no-repeat #fff
+}
+
+.searchresult-slider-item .bg-image img {
+	width: 100% !important;
+}
+
+
+// umbraco form custom style
+.umbraco-forms-form {
+	.react-datepicker-wrapper{
+		width: 100%;
+	}
+}
+
+.search__housenumber--component{
+	z-index: 10 !important;
+}
+
+
+
+/**responsive fix**/
+
+
+
+
+@media (max-width: 575px) {
+    .meerundhus-logo {
+        height: 38px;
+    }
+
+	// overflow fix
+	html{
+		overflow-x: hidden;
+	}
+
+	.footer__bottom .col__left ul{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: left;
+	}
+}
+
+@media (min-width: 575px) and (min-width: 767px) {
+    .meerundhus-logo {
+ 		height: 46px;
+    }
+}
+
+@media (min-width: 767px) {
+    .meerundhus-logo {
+ 		height: 58px;
+    }
+	
+}
+
+@media (min-width: 991px) {
+	.searchbar > form.loading-state .search-item{
+		flex:1
+	}
+}
+
+
+@media screen and (max-width: 992px) {
+	.searchbar{
+		#inputpickerSearch,#datepicker-portal {
+			.date-wrapper .react-datepicker-wrapper{
+				width: 100%;
+			}
+
+			position: relative;
+			top:1px;
+			right:2px
+		}
+
+		.search-item.duration,.search-item.pet{
+			position: relative;
+			left:2px
+		}
+		.search-item.guests{
+			position: relative;
+			right:2px
+		}
+	}
+}
+
+
+.mb-booking button[data-target="#additionalcostsSm"]{
+	display: flex;
+	align-items: center;
+	gap: 5px
+}
+
+
+.section__search--results{
+	.objectfav{
+		z-index: 1 !important;
+	}
+}
+
+.cottage-search{
+	z-index: 2 !important;
+}

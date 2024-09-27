@@ -1,0 +1,9 @@
+﻿
+
+.input-validation-error {
+    border-color: red !important;
+
+    & ~ label:before {
+        border-color: red !important;
+    }
+}

@@ -1,0 +1,97 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+.header__spacer {
+    height: 91px;
+
+    @include media("<sm") {
+        height: 80px;
+    }
+
+    @include media("<576px") {
+        height: 72px;
+    }
+}
+
+header {
+    + .section__hero--carousel,
+    .section__hero {
+        padding-top: 0;
+    }
+
+    + .section__divider {
+        padding-top: 50px !important;
+
+        .divider {
+            margin-top: 0;
+        }
+    }
+
+}
+
+/*section:not(.section__hero),
+section:not(.section__hero--carousel),
+section:not(.section__herogallery) {
+    + section {
+        padding-top: 0 !important;
+
+        &.section__caption {
+            padding-top: 50px !important;
+        }
+    }
+}*/
+
+
+section {
+    position: relative;
+
+    &.section--grey {
+        background-color: $bg-grey-2;
+    }
+
+    + section.section__blog.section--grey {
+        margin-top: 0 !important;
+        padding-top: 80px !important;
+
+        @include media("<md") {
+            padding-top: 50px !important;
+        }
+    }
+    /*&.section__blog + section:not(.section__caption) {
+        padding-top: 80px !important;
+
+        @include media("<md") {
+            padding-top: 50px !important;
+        }
+    }*/
+
+
+    /* Section inside Section */
+    section {
+        > .container {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    &:not(.section__caption, .section__blog) + section.section__divider {
+        .divider {
+            margin-top: 0;
+        }
+    }
+
+    &.section__caption + .section__caption {
+        padding-top: 50px !important;
+    }
+
+    &.section__divider + section {
+        padding-top: 50px !important;
+    }
+
+    @include media("<md") {
+
+        + section {
+            padding-top: 50px !important;
+        }
+    }
+}
+

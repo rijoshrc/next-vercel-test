@@ -1,0 +1,214 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+/// <reference path="../utilities/mixins/mixins.scss" />
+
+
+
+.section__promocards {
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+
+    h1, .title-spacing {
+        margin-bottom: 50px;
+    }
+
+    .offer-row {
+        //margin-top: 5rem;
+    }
+
+    p:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    .offer-wrapper {
+
+        &:hover {
+            text-decoration: none !important;
+
+            .offer-img img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .offer-img {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 450px;
+        border-radius: 0.15rem;
+
+        img {
+            max-width: 200% !important;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform $dur-1 ease-in-out;
+        }
+
+        &:hover {
+            .offer-layer {
+                background-color: transparent;
+                transition: 0.3s;
+                border: 3px solid $c-white;
+            }
+
+            .offer-name {
+                -webkit-text-fill-color: $c-white;
+                transition: 0.3s;
+            }
+        }
+    }
+
+
+    .offer-title {
+        font-weight: $medium;
+        font-size: 20px;
+        padding-top: 15px;
+        color: #495662;
+
+        span {
+            color: #659394;
+            font-size: 18px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            font-family: $basefont;
+            font-weight: 700 !important;
+            font-size: 24px;
+            line-height: 28px;
+            color: #495652;
+        }
+    }
+
+
+
+    &--small {
+        .offer-img {
+            height: 175px;
+        }
+
+        .offer-title {
+            font-weight: $bold;
+            font-size: 18px;
+        }
+    }
+
+    &--medium {
+        .offer-img {
+            height: 240px;
+        }
+
+        .offer-title {
+            font-weight: $bold;
+            font-size: 18px;
+        }
+    }
+
+    &--centeredTitle {
+        .offer-title {
+            text-align: center;
+            font-style: italic;
+        }
+    }
+
+    .offer-layer {
+        position: absolute;
+        height: 90%;
+        width: 90%;
+        background-color: $c-white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 3px;
+        transition: 0.3s;
+        border: 3px solid transparent;
+    }
+
+    .offer-name {
+        position: absolute;
+        background: url(https://cdn.pixabay.com/photo/2020/01/30/21/24/rain-4806609_1280.jpg);
+        background-size: cover;
+        background-position: center;
+        font-size: 4em;
+        font-weight: 900;
+        line-height: 1;
+        text-align: center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        text-transform: uppercase;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        padding: 25px;
+    }
+
+    @include media("<md") {
+        .offer-img {
+            height: 300px;
+        }
+
+
+        &--small {
+            .offer-img {
+                height: 150px;
+            }
+        }
+
+
+        &--medium {
+            .offer-img {
+                height: 210px;
+            }
+        }
+    }
+
+    @include media("<sm") {
+        h1, .title-spacing {
+            margin-bottom: 25px;
+        }
+    }
+
+    @include media("<576px") {
+        .offer-row {
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .title-spacing {
+                padding: 0 !important;
+            }
+        }
+
+
+        .offer-title {
+            font-size: 16px;
+
+            span {
+                font-size: 14px !important;
+            }
+        }
+    }
+
+    .main_text {
+        padding-top: 10px;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .section__promocards {
+        .offer-img img {
+            width: auto;
+        }
+    }
+}

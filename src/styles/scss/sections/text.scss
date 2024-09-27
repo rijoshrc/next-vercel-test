@@ -1,0 +1,101 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+
+.section__text {
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    img{
+        border-radius:5px;
+    }
+        
+    .column {
+        padding-left: 0px;
+    }
+
+    div {
+        font-size: 18px;
+        line-height: 1.58;
+    }
+
+    a {
+        font-weight: bold;
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    &--content {
+        width: 100%;
+    }
+
+    .pull-top {
+        margin-top: -15px;
+    }
+
+    [class*="col-"] {
+        padding-right: 25px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    .heading,
+    .subheading {
+        margin-bottom: 20px;
+    }
+
+    .heading + p,
+    .subheading + p {
+        padding-top: 15px;
+    }
+
+    p + .heading,
+    p + .subheading {
+        padding-top: 20px;
+    }
+
+    &.section__typography [class*="col-"] {
+        display: block;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: 10px;
+    }
+
+    @include media("<md") {
+
+        img{
+            width: auto;
+        }
+
+        [class*="col-"] {
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .pull-top {
+            margin-top: 0;
+        }
+    }
+
+    @include media("<sm") {
+        p {
+            word-break: break-word;
+        }
+    }
+}
+
+.display-block .row {
+    display: block !important;
+}

@@ -1,0 +1,50 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+
+.loading {
+    pointer-events: none;
+    user-select: none;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #333, $alpha: 0.2);
+        margin: 0 auto;
+        z-index: 10;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        transform: translateY(-50%);
+        background: url("/images/_global/loading-black.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 35px;
+        width: 35px;
+        margin: 0 auto;
+    }
+
+    &.loading__search {
+        position: relative;
+
+        &:before {
+            content: "";
+            z-index: 12;
+        }
+
+        &:after {
+            content: "";
+            position: fixed;
+        }
+    }
+}
+

@@ -1,0 +1,165 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+
+.section__imagetext {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: $c-white;
+
+    .subheading {
+        font-weight: normal;
+    }
+
+    &.image__float {
+        .column {
+            width: 100%;
+
+            &:first-child {
+                display: block;
+
+                .img__wrapper {
+                    display: block;
+                    width: calc(50% - 15px);
+                    margin-right: 20px;
+                    margin-bottom: 15px;
+                    float: left;
+
+                    &.float-right {
+                        margin-right: 0;
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            &:last-child {
+                display: none;
+            }
+
+            .button {
+                display: inline-block;
+            }
+        }
+
+        @include media("<sm") {
+            .column {
+                &:first-child {
+                    .img__wrapper {
+                        display: none;
+                    }
+                }
+
+                &:last-child {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .columns__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .column {
+        width: 50%;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        padding: 0 15px;
+
+        &:first-child {
+            align-self: flex-start;
+        }
+
+        .image {
+            border-radius: 5px;
+            overflow: hidden;
+        }
+    }
+
+    h3 {
+        font-weight: $bold;
+    }
+
+    h3, h6 {
+        margin-bottom: 15px;
+    }
+
+    .content__date {
+        margin-bottom: 20px;
+
+        a, a:hover, a:focus {
+            color: $bg-green;
+        }
+
+        span.date {
+            color: $c-grey;
+        }
+    }
+
+    picture {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 360px;
+            border-radius: 5px;
+        }
+    }
+
+    .button {
+        margin-top: 10px;
+    }
+
+    small {
+        font-weight: $semibold;
+        text-align: center;
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    &.section__imagetext--flip {
+        .column:first-child {
+            order: 1;
+        }
+    }
+
+
+    picture.hidden {
+        display: none;
+    }
+
+    @include media("<md") {
+        picture {            
+            img {                
+                height: 230px;                
+            }
+        }
+
+
+        .column {
+            width: 100%;
+
+            &:first-child {
+                order: 1;
+            }
+
+            &:last-child {
+                margin-bottom: 25px;
+            }
+        }
+
+        &.section__imagetext--flip {
+            .column:first-child {
+                margin-bottom: 0;
+            }
+
+            .column:last-child {
+                order: -1;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+

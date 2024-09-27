@@ -1,0 +1,56 @@
+﻿/* Quattrocento Sans Regular and Bold */
+@font-face {
+    font-family: 'Quattrocento Sans';
+    src: url('/fonts/Quattrocento-Sans/quattrocento-sans-v10-latin-regular.woff2') format('woff2'),
+         url('/fonts/Quattrocento-Sans/quattrocento-sans-v10-latin-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quattrocento Sans';
+    src: url('/fonts/Quattrocento-Sans/quattrocento-sans-v10-latin-700.woff2') format('woff2'),
+         url('/fonts/Quattrocento-Sans/quattrocento-sans-v10-latin-700.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Caveat Regular and Bold */
+@font-face {
+    font-family: 'Caveat';
+    src: url('/fonts/Caveat/caveat-v4-latin-regular.woff2') format('woff2'),
+         url('/fonts/Caveat/caveat-v4-latin-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('/fonts/Caveat/caveat-v4-latin-700.woff2') format('woff2'),
+         url('/fonts/Caveat/caveat-v4-latin-700.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Open Sans Regular and Bold */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/Open Sans/open-sans-v15-latin-regular.woff2') format('woff2'),
+         url('/fonts/Open Sans/open-sans-v15-latin-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/Open Sans/open-sans-v15-latin-700.woff2') format('woff2'),
+         url('/fonts/Open Sans/open-sans-v15-latin-700.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

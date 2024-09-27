@@ -1,0 +1,72 @@
+﻿@import "bootstrap-4.5.3/bootstrap.scss";
+
+// Utilities
+// @import "utilities/fonts.scss";
+@import "utilities/variables.scss";
+@import "utilities/animation.scss";
+@import "utilities/mixins/mixins.scss";
+@import "utilities/mixins/hover.scss";
+
+// Vendors
+@import "utilities/vendors/include-media.scss";
+@import "utilities/vendors/slick.scss";
+@import "utilities/vendors/flaticon.scss";
+
+// Components Styles
+@import "components/navbar.scss";
+@import "components/buttons.scss";
+@import "components/range.scss";
+@import "components/loader.scss";
+@import "components/forms.scss";
+@import "components/search-option.scss";
+@import "components/datepicker-custom.scss";
+@import "components/blog-pagination.scss";
+@import "components/modals.scss";
+
+// Base Styles
+@import "base/body.scss";
+@import "base/header.scss";
+@import "base/footer.scss";
+
+
+// Sections
+@import "sections/form-validation.scss";
+@import "sections/section.scss";
+@import "sections/text.scss";
+@import "sections/hero.scss";
+@import "sections/hero-carousel.scss";
+@import "sections/cta-cards.scss";
+@import "sections/image-with-text.scss";
+@import "sections/featured-blog.scss";
+@import "sections/divider.scss";
+@import "sections/caption.scss";
+@import "sections/image-gallery.scss";
+@import "sections/promo-cards.scss";
+@import "sections/promo.scss";
+@import "sections/big-image-two-small-image.scss";
+@import "sections/article.scss";
+@import "sections/search-results.scss";
+@import "sections/blog-featured-variation.scss";
+@import "sections/hero-gallery.scss";
+@import "sections/lodging-page-content.scss";
+@import "sections/accordion.scss";
+@import "sections/search-house-section.scss";
+@import "sections/accordion-menu.scss";
+@import "sections/tabs.scss";
+@import "sections/features.scss";
+@import "sections/checkboxes-section.scss";
+@import "sections/pods.scss";
+@import "sections/content-slider.scss";
+@import "sections/content-sliders.scss";
+@import "sections/booking-page.scss";
+@import "sections/calendar.scss";
+@import "sections/favourites.scss";
+@import "sections/map-section.scss";
+@import "sections/ratings-and-comments.scss";
+@import "sections/javascript-section.scss";
+@import "sections/small-teaser-pods.scss";
+
+
+// custom style added on top of old css
+@import "components/custom.scss";
+@import "components/mega-menu.scss";

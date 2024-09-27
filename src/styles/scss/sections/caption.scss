@@ -1,0 +1,105 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+
+.section__caption {
+    position: relative;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: $c-white;
+
+    .caption {
+
+        .heading {
+            font-weight: $medium;
+            color: $bg-green;
+        }
+
+        .heading {
+            color: inherit;
+
+            + p {
+                padding-top: 0;
+            }
+        }
+
+        &.caption-with-btn {
+            display: flex;
+            align-items: center;
+
+            .button__arrow {
+                border: solid 1px #707070;
+                box-shadow: none;
+                display: inline-block;
+                cursor: pointer;
+                padding: 11px 35px 11px 16px;
+                flex: none;
+
+                &:before {
+                    content: "";
+                    background: url(/images/svg/close-btn-black.svg);
+                    transform: rotate(0deg);
+                    top: 15px;
+                    left: auto;
+                    right: 12px;
+                    width: 14px;
+                    height: 14px;
+                    background-size: contain;
+                    transition: all $dur-1 ease;
+                }
+
+                &:hover {
+                    background-color: $c-white;
+
+                    &:before {
+                        transform: rotate( 90deg );
+                    }
+                }
+            }
+
+            @include media("<430px") {
+                flex-flow: column;
+
+                .button__arrow {
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    padding: 0;
+
+                    span {
+                        display: none;
+                    }
+
+                    &:before {
+                        content: "";
+                        background: url(/images/svg/close-btn.svg);
+                        width: 17px;
+                        height: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+    &--green {
+        background-color: $bg-green;
+
+        .caption {
+            .heading {
+                color: inherit;
+            }
+        }
+    }
+
+
+    &--dark {
+
+        .caption {
+            .heading {
+                color: inherit;
+            }
+        }
+    }
+}

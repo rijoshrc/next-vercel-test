@@ -1,0 +1,67 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+/// <reference path="../utilities/mixins/mixins.scss" />
+
+.section__map {
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    .title {
+        font-size: 20px;
+        font-weight: $bold;
+        text-align: left;
+        color: $bg-green;
+        margin-bottom: 30px;
+    }
+
+    .map__container {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+    }
+
+
+    div[id*="map"] {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    .distance__list {
+        @include reset-list;
+        margin-top: 22px;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            width: 30%;
+            background-color: rgba($color: $bg-grey, $alpha:0.5);
+            margin-bottom: 5px;
+            margin-right: 15px;
+            padding: 5px 20px;
+            border-left: 4px solid #e0dddd;
+        }
+    }
+
+    @include media("<sm") {
+        .distance__list {
+            justify-content: space-between;
+
+            li {
+                width: 45%;
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include media("<420px") {
+        .distance__list {
+            li {
+                width: 100%;
+            }
+        }
+    }
+}

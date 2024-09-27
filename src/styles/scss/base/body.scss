@@ -1,0 +1,362 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+
+body {
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: $c-white;
+    font-family: $basefont;
+    line-height:1.58rem;
+}
+
+.hidden{
+    display:none;
+}
+/*
+td, th, pre {
+    font-family: 'Quattrocento Sans', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+input, button, select, optgroup, textarea, a {
+    font-family: 'Quattrocento Sans', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+p, span, li {
+    font-family: 'Quattrocento Sans', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+*/
+
+a {
+    color: #033540;
+}
+
+.section__text, .section__smallteaserpods {
+    a:hover {
+        color: #033540 !important;
+    }
+}
+
+img {
+    @media (max-width: 992px) {
+        width: 100%;
+    }
+}
+
+h1, h2, h3, .heading {
+    font-family: var(--font-caveat-regular);
+    font-weight: $regular !important;
+    color: $c-green-dark;
+    margin: 0;
+    display: block;
+    flex-basis: 100%;
+}
+
+
+h4, h5, h6, .subheading {
+    font-family: $basefont;
+    font-weight: $bold;
+    color: $c-green-dark;
+    margin: 0;
+    display: block;
+    flex-basis: 100%;
+}
+
+
+h1, .heading {
+    font-size: 82px;
+    line-height: 96px;
+}
+
+h2, h2.heading {
+    font-size: 70px;
+    line-height: 80px;
+}
+
+h3 {
+    font-size: 46px;
+    line-height: 50px;
+}
+
+h4, .subheading {
+    font-size: 32px;
+    line-height: 35px;
+    margin-bottom: 12px;
+}
+h5 {
+    font-size: 28px;
+    line-height: 31px;
+    margin-bottom: 12px;
+}
+
+h6 {
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 12px;
+}
+
+p {
+    font-family: $basefont;
+    font-size: 18px;
+    line-height: 1.58;
+    font-weight: $regular;
+    color: $c-darker;
+    margin-bottom: 12px;
+}
+
+small {
+    font-family: $basefont;
+    font-size: 16px;
+    line-height: 1.33;
+    font-weight: $regular;
+    color: $c-green-dark;
+}
+
+.a-left{
+    text-align:left;
+}
+
+.a-center{
+    text-align:center;
+}
+
+.a-right{
+    text-align:right;
+}
+
+@include media("<md") {
+    h1, .heading {
+        font-size: 70px;
+        line-height: 1.3;
+    }
+
+    h2, h2.heading {
+        font-size: 60px;
+        line-height: 1.3;
+    }
+}
+
+@include media("<sm") {
+    h1, .heading {
+        font-size: 44px;
+    }
+
+    h2, h2.heading {
+        font-size: 42px;
+    }
+
+    h3 {
+        font-size: 38px;
+        line-height: 1.3;
+    }
+
+    h4, .subheading {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    h5 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    h6 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+}
+
+
+
+/* Custom Margins */
+.mt-25 {
+    margin-top: 25px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+
+/* Custom Font Classes*/
+
+.font-caveat {
+    font-family: $caveat !important;    
+
+    * {
+        font-family: $caveat !important;
+    }
+}
+
+.font-quatro {
+    font-family: $basefont !important;
+
+    * {
+        font-family: $basefont !important;
+    }
+}
+
+.font-open-sans {
+    font-family: $opensans !important;
+
+    * {
+        font-family: $opensans !important;
+    }
+}
+
+.s-82px {
+    font-size: 82px !important;
+    line-height: 96px !important;
+    margin-bottom: 10px;
+}
+
+.s-70px {
+    font-size: 70px !important;
+    line-height: 80px !important;
+    margin-bottom: 10px;
+}
+
+.s-46px {
+    font-size: 46px !important;
+    line-height: 50px !important;
+    margin-bottom: 10px;
+}
+
+.s-32px {
+    font-size: 32px !important;
+    line-height: 35px !important;
+    margin-bottom: 10px;
+}
+
+.s-28px {
+    font-size: 28px !important;
+    line-height: 31px !important;
+    margin-bottom: 10px;
+}
+
+.s-24px {
+    font-size: 24px !important;
+    line-height: 26px !important;
+    margin-bottom: 10px;
+}
+
+.s-20px {
+    font-size: 20px !important;
+    line-height: 23px !important;
+    margin-bottom: 10px;
+}
+
+.s-18px {
+    font-size: 18px !important;
+    line-height: 21px !important;
+    margin-bottom: 10px;
+}
+
+.s-14px {
+    font-size: 14px !important;
+    line-height: 17px !important;
+    margin-bottom: 10px;
+}
+
+.s-10px {
+    font-size: 10px !important;
+    line-height: 14px !important;
+    margin-bottom: 10px;
+}
+
+.s-16px {
+    font-size: 16px !important;
+    line-height: 19px !important;
+    margin-bottom: 10px;
+}
+
+.s-38px {
+    font-size: 38px !important;
+    line-height: 41px !important;
+    margin-bottom: 10px;
+}
+
+.s-34px {
+    font-size: 34px !important;
+    line-height: 37px !important;
+    margin-bottom: 10px;
+}
+
+.s-36px {
+    font-size: 36px !important;
+    line-height: 39px !important;
+    margin-bottom: 10px;
+}
+
+.H1-sc {
+    font-family: var(--font-caveat-regular);
+    font-size: 60px;
+    line-height: 64px;
+    margin-bottom: 10px;
+}
+
+.form-control[readonly]{
+    background-color:#fff;
+}
+
+@include media ("<md") {
+    .s-82px {
+        font-size: 60px !important;
+        line-height: 1.3 !important;
+    }
+
+    .s-70px {
+        font-size: 46px !important;
+        line-height: 1.3 !important;
+    }
+
+    .H1-sc {
+        font-size: 46px !important;
+        line-height: 49px !important;
+        margin-bottom: 5px;
+    }
+    /*.s-46px {
+        font-size: 32px !important;
+        line-height: 1.3 !important;
+    }
+
+    .s-32px {
+        font-size: 28px !important;
+        line-height: 1.3 !important;
+    }
+
+    .s-28px {
+        font-size: 24px !important;
+        line-height: 1.3 !important;
+    }
+
+    .s-24px {
+        font-size: 20px !important;
+        line-height: 1.3 !important;
+    }*/
+}
+
+@include media ("<sm") {
+    .s-82px {
+        font-size: 46px !important;
+    }
+
+    .s-70px {
+        font-size: 32px !important;
+    }
+
+/*    .s-46px {
+        font-size: 28px !important;
+    }
+
+    .s-32px {
+        font-size: 24px !important;
+    }
+
+    .s-28px {
+        font-size: 22px !important;
+    }
+
+    .s-24px {
+        font-size: 20px !important;
+    }*/
+}

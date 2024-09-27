@@ -1,0 +1,291 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+/// <reference path="../utilities/mixins/mixins.scss" />
+
+.section__form {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    h2,h3,h4,h5,h6,p{
+        margin-bottom:15px;
+    }
+
+    .field-validation-error{
+        display:block;
+    }
+
+    &--half {
+        .form__wrapper {
+            max-width: 555px;
+            margin: 0 auto;
+        }
+    }
+
+    a{
+        color:inherit;
+
+    }
+
+    .form__wrapper,
+    .umbraco-forms-form {       
+        padding: 50px 40px;
+    }
+
+    .item__row {
+        margin-bottom: 30px;
+        color: $c-white;
+
+        .label {
+            font-family: $basefont;
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--checkbox {
+            margin-bottom: 20px;
+
+            input.form-control {
+                padding: 0;
+                appearance: none;
+                -webkit-appearance: none;
+                visibility: hidden;
+                height: 0px;
+            }
+
+            label {
+                cursor: pointer;
+            }
+        }
+
+        &--radio {
+            input.form-control {
+                width: auto;
+            }
+
+            label:before {
+                border-color: $c-white;
+            }
+        }
+
+        a {
+            text-decoration: underline;
+            color: $c-white;
+        }
+    }
+
+    input {
+
+        &.form-control {
+            padding: 25px 20px;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    textarea {
+        padding: 25px 20px;
+    }
+
+    @include media('<md') {
+        .form__wrapper,
+        .umbraco-forms-form {
+            padding: 30px 25px;
+        }
+    }
+}
+
+
+.umbraco-forms-form {
+
+    .col-md-12,
+    div[class^="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+
+        label {
+            font-family: $basefont;
+            font-size: 18px;
+            color: inherit;
+            padding: 0 0 10px;
+            margin-bottom: 0;
+        }
+    }
+
+    .form-group.titleanddescription {
+        .form-control {
+            height: auto;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        padding: 25px 20px;
+        display: block;
+        width: 100%;
+        height: calc(1.5em + 0.75rem + 2px );
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    input[type="submit"],
+    input[name="submitbtn"] {
+        display: block;
+        text-transform: uppercase;
+        background: $c-red;
+        background: $c-red-gradient;
+        border-color: $c-red;
+        padding: 10px;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        font-size: 17px;
+        padding: 7px 25px 4px;
+        border-radius: 5px;
+        color: $c-white;
+        transition: all $dur-2;
+        box-shadow: 0 2px 0 $c-red-hover;
+
+        &:focus,
+        &:visited {
+            border: none;
+            outline: none;
+            text-decoration: none;
+            color: $c-white;
+        }
+
+        &:hover {
+            background: $c-red;
+            background: $c-red-hover;
+            color: $c-white;
+            text-decoration: none;
+            border-color: $c-red;
+        }
+    }
+
+    .form-group.checkbox {
+        margin-bottom: 20px;
+
+        label {
+            user-select: none;
+            cursor: pointer;
+            padding-bottom: 0;
+
+            &:before {
+                width: 20px;
+                height: 20px;
+                background-color: #fff;
+                display: block;
+                content: "";
+                float: left;
+                margin-right: 5px;
+                border: 1px solid;
+                border-radius: 3px;
+            }
+        }
+
+        &.checkbox-checked {
+            label {
+                &:before {
+                    background-color: $bg-green;
+                    box-shadow: inset 0px 0px 0px 3px $c-white;
+                }
+            }
+        }
+    }
+
+    input[type="checkbox"] {
+        padding: 0;
+        appearance: none;
+        -webkit-appearance: none;
+        visibility: hidden;
+        height: 0px;
+    }
+
+    .form-control.radio {
+        position: relative;
+        background: transparent;
+        border: none;
+        outline: none;
+        padding-left: 0;
+
+        input[type="radio"] {
+            opacity: 0;
+        }
+
+        label {
+            font-size: 1rem;
+            padding-left: 10px;
+            cursor: pointer;
+
+            &:before {
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                top: 8px;
+                left: 0;
+                content: '';
+                display: inline-block;
+                -moz-border-radius: 50px;
+                -webkit-border-radius: 50px;
+                border-radius: 50px;
+                border: 1px solid $c-white;
+                background: $c-white;
+            }
+        }
+
+        &.radio-checked {
+            label::after {
+                content: '';
+                position: absolute;
+                top: 12px;
+                left: 4px;
+                display: inline-block;
+                font-size: 11px;
+                width: 10px;
+                height: 10px;
+                background-color: $bg-green;
+                -moz-border-radius: 50px;
+                -webkit-border-radius: 50px;
+                border-radius: 50px;
+            }
+        }
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+

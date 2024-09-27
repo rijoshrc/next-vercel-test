@@ -1,0 +1,187 @@
+﻿/// <reference path="../utilities/vendors/include-media.scss" />
+/// <reference path="../utilities/variables.scss" />
+/// <reference path="../utilities/mixins/mixins.scss" />
+
+.section__ratingsandcomments {
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: left;
+        color: $bg-green;
+        margin-bottom: 30px;
+    }
+
+    .rating {
+        color: $c-dark;
+
+        &__item {
+            + .rating__item {
+                padding-top: 50px;
+            }
+        }
+
+        &__column {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        &__desc {
+            padding-top: 15px;
+        }
+
+        &__average {
+            position: relative;
+            margin-bottom: 40px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: auto;
+                bottom: -15px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $bg-green;
+            }
+
+            &-title {
+                display: flex;
+                margin-bottom: 15px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .rating__lists-item {
+                margin-left: 25px;
+            }
+
+            &-columns {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                max-width: 70%;
+
+                .column {
+                    font-weight: bold;
+                }
+
+                .rating__lists-item {
+                    margin-left: 0;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+
+    .rating__lists-item {
+        font-size: 12px;
+
+        span {
+            font-size: 16px;
+            font-weight: 600;
+            margin-left: 15px;
+        }
+
+        i.star {
+            content: "";
+            background: url("/images/svg/star.svg");
+            @include background-control;
+            background-size: contain;
+            height: 15px;
+            width: 15px;
+            display: inline-block;
+        }
+
+        .rating-gray {
+            display: inline !important;
+            vertical-align: middle;
+
+            i.star {
+                content: "";
+                background: url("/images/svg/star-gray.svg");
+                @include background-control;
+                background-size: contain;
+            }
+        }
+
+        .rating-gold {
+            color: #ffcc2d !important;
+            margin: 0 !important;
+            display: inline !important;
+            vertical-align: middle;
+        }
+
+        .rating-star {
+            display: inline;
+        }
+    }
+
+    @include media("<md") {
+        .rating {
+            &__average {
+
+                &-columns {
+                    max-width: 100%;
+
+                    .column {
+                        .rating__lists-item {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include media("<sm") {
+        .rating {
+            &__column {
+                flex-flow: column;
+            }
+
+            &__title {
+                margin-bottom: 15px;
+            }
+
+            &__average {
+                &-columns {
+                    flex-wrap: wrap;
+
+                    .column {
+                        width: 50%;
+                        margin-bottom: 25px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media("<450px") {
+        .rating {
+            &__average {
+
+                &-title {
+                    flex-flow: column;
+
+                    .rating__lists-item {
+                        margin-left: 0;
+                        padding-top: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
